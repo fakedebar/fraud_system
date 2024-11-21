@@ -1,0 +1,15 @@
+=== Suspicious Transactions Analysis ===
+Line 10: Transaction ID: 4, Name: 101, Amount: 20000.0, Description: 2024-11-19 13:45
+
+=== Original Content ===
+=== File Analysis ===
+Number of Words: 11
+Number of Lines: 6
+
+=== Original Content ===
+id,userId,amount,dateTime,type
+1,101,5000,2024-11-19 10:00,Transfer
+2,102,10000,2024-11-19 11:30,Purchase
+3,103,300,2024-11-19 12:00,Withdrawal
+4,101,20000,2024-11-19 13:45,Transfer
+5,104,50,2024-11-19 15:00,Deposit

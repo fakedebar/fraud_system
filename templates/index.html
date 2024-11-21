@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection System</title>
+    <link rel="icon" href="imgs/icon.png">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #000;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #000;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #03dac5;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            height: 100vh;
+            background: url('https://darknetdiaries.com/imgs/spam.jpg') no-repeat right center/cover;
+            background-color: #000;
+        }
+
+        .hero-text {
+            position: relative;
+            max-width: 600px;
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            line-height: 1.8;
+            margin-left: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hero-text:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #03dac5;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #f5f5f5;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .hero-text p:hover {
+            transform: scale(1.1);
+            color: red;
+        }
+
+        .hero-text a {
+            text-decoration: none;
+            background-color: #03dac5;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-text a:hover {
+            background-color: #02c7b1;
+            transform: translateY(-3px);
+        }
+
+        /* About Section Styling */
+        #about {
+            padding: 50px 20px;
+            text-align: left;
+            background: url('https://darknetdiaries.com/imgs/wallpapers/dragoncable%20Desktop.jpg') no-repeat center center/cover;
+            animation: fadeIn 1.5s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #about:hover {
+            transform: scale(1.05); /* Zoom in slightly on hover */
+        }
+
+        /* Key Features Section Styling */
+        #features {
+            padding: 50px 20px;
+            text-align: left;
+            background: rgb(0, 0, 0);            
+            animation: fadeIn 1.5s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #features:hover {
+            transform: scale(1.05); /* Zoom in slightly on hover */
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transform: translateX(-50px); /* Start slightly off-screen */
+            opacity: 0; /* Start invisible */
+            animation: slideInFromLeft 1s ease-out forwards; /* Slide-in effect */
+        }
+
+        .content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #03dac5;
+            transform: scale(1.1);
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+
+        /* Animations */
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fraud Detection System</h1>
+        <nav>
+            <a href="/login">Login</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact us</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h2>Stay Ahead of Cyber Threats</h2>
+            <p>
+                Discover the ultimate solution to fraud prevention. Our state-of-the-art detection system, powered by advanced machine learning and AI algorithms, monitors transactions in real-time to uncover patterns, anomalies, and suspicious activities before they become a threat. Protect your business and your customers with precision and confidence.
+            </p>
+            <a href="/signup">Join us now</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="content">
+            <h3>About Our System</h3>
+            <p>
+                The Fraud Detection System is a cutting-edge solution developed to protect businesses and individuals from financial fraud. 
+                By combining advanced data analysis techniques and state-of-the-art machine learning algorithms, our system provides unmatched security 
+                and accuracy in identifying potential threats.
+            </p>
+            <p>
+                Our platform monitors transaction behaviors, detects anomalies, and identifies suspicious activities in real-time. 
+                Whether it’s unusual spending patterns, unauthorized access, or signs of cybercrime, our system is designed to respond quickly and 
+                efficiently to mitigate risks before they escalate.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="content">
+            <h3>Key Features</h3>
+            <p>
+                - Real-Time Anomaly Detection<br>
+                - Seamless Integration<br>
+                - Comprehensive Analytics<br>
+                - Machine Learning Capabilities<br>
+                - Global Coverage<br>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Fraud Detection System. All Rights Reserved.
+    </footer>
+
+    <script>
+        const hero = document.querySelector('.hero');
+
+        hero.addEventListener('mousemove', (event) => {
+            const { offsetX, offsetY } = event;
+            const { clientWidth, clientHeight } = hero;
+
+            const xPos = (offsetX / clientWidth - 0.5) * 10;
+            const yPos = (offsetY / clientHeight - 0.5) * 10;
+
+            hero.style.backgroundPosition = `${50 + xPos}% ${50 + yPos}%`;
+        });
+
+        hero.addEventListener('mouseleave', () => {
+            hero.style.backgroundPosition = '50% 50%';
+        });
+    </script>
+</body>
+</html>
